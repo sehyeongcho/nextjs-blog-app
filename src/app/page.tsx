@@ -1,6 +1,5 @@
 import Head from "next/head";
 import homeStyles from "../styles/Home.module.css";
-import path from "path";
 
 export default function Home() {
   return (
