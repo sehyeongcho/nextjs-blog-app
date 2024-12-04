@@ -31,13 +31,3 @@ export default function Home() {
     </div>
   );
 }
-
-// export const getStaticProps: GetStaticProps = async () => {
-//   const allPostsData = getSortedPostsData()
-
-//   return {
-//     props: {
-//       allPostsData
-//     }
-//   }
-// }
