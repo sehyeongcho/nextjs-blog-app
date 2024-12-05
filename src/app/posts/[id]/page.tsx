@@ -1,4 +1,5 @@
 import { getAllPostIds, getPostData } from "@/lib/posts"
+import Head from "next/head"
 
 export default async function Post({ params }: { params: { id: string } }) {
   console.log('params', params)
@@ -13,7 +14,14 @@ export default async function Post({ params }: { params: { id: string } }) {
 
   return (
     <div>
-      {postData.title}
+      <Head>
+        <title>{postData.title}</title>
+      </Head>
+      <article>
+        <h1>{postData.title}</h1>
+        <div>{postData.date}</div>
+        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }}></div>
+      </article>
     </div>
   )
 }
