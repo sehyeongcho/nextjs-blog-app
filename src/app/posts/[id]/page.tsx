@@ -2,16 +2,18 @@ import { getAllPostIds, getPostData } from "@/lib/posts"
 
 export default async function Post({ params }: { params: { id: string } }) {
   console.log('params', params)
-  
+
+  const { id } = await params
+
   const postData: {
-      title: string
-      date: string
-      contentHtml: string
-  } = await getPostData(params.id as string)
+    title: string
+    date: string
+    contentHtml: string
+  } = await getPostData(id as string)
 
   return (
     <div>
-      <title>{postData.title}</title>
+      {postData.title}
     </div>
   )
 }
