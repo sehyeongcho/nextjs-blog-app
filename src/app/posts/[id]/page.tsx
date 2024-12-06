@@ -38,3 +38,5 @@ export function generateStaticParams() {
     id: path.id
   }))
 }
+
+export const dynamicParams = false
