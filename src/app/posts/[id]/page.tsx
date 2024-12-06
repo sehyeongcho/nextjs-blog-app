@@ -5,13 +5,13 @@ import Head from "next/head"
 export default async function Post({ params }: { params: { id: string } }) {
   console.log('params', params)
 
-  const { id } = await params
+  const { id } = await params // Next 15에서는 `params`와 같은 API가 비동기적으로 만들어졌습니다. 따라서 `await` 동적 API를 사용하여 해당 속성에 액세스해야 합니다.
 
   const postData: {
     title: string
     date: string
     contentHtml: string
-  } = await getPostData(id as string)
+  } = await getPostData(id as string) // 빌드 시점에 호출됩니다.
 
   return (
     <div>
