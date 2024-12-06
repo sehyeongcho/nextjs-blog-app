@@ -4,7 +4,7 @@ import { getSortedPostsData } from "@/lib/posts";
 import Link from "next/link";
 
 export default function Home() {
-  const allPostsData = getSortedPostsData()
+  const allPostsData = getSortedPostsData() // 빌드 시점에 호출됩니다.
 
   return (
     <div>
