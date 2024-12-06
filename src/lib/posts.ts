@@ -7,13 +7,10 @@ import rehypeRaw from "rehype-raw";
 import rehypeStringify from "rehype-stringify";
 
 const postsDirectory = path.join(process.cwd(), "src\\posts");
-console.log("process.cwd()", process.cwd());
-console.log("postsDirectory", postsDirectory);
 
 export function getSortedPostsData() {
   // Reads the contents of the directory. (src/posts)
   const fileNames = fs.readdirSync(postsDirectory);
-  console.log("fileNames", fileNames);
 
   const allPostsData = fileNames.map(fileName => {
     const id = fileName.replace(/\.md$/, "");
