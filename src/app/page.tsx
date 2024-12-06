@@ -7,7 +7,7 @@ export default function Home() {
   const allPostsData = getSortedPostsData() // 빌드 시점에 호출됩니다.
 
   return (
-    <div>
+    <div className={homeStyles.container}>
       <Head>
         <title>Sehyeong Cho</title>
       </Head>
