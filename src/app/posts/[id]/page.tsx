@@ -1,5 +1,6 @@
 import { getAllPostIds, getPostData } from "@/lib/posts"
 import Head from "next/head"
+import postStyles from "../../../styles/Post.module.css"
 
 // `generateStaticParams`가 반환한 `params`를 사용하여 이 페이지의 여러 버전이 정적으로 생성됩니다.
 export default async function Post({ params }: { params: { id: string } }) {
@@ -14,7 +15,7 @@ export default async function Post({ params }: { params: { id: string } }) {
   } = await getPostData(id as string) // 빌드 시점에 호출됩니다.
 
   return (
-    <div>
+    <div className={postStyles.container}>
       <Head>
         <title>{postData.title}</title>
       </Head>
