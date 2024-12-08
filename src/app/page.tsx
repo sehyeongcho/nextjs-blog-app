@@ -2,6 +2,7 @@ import Head from "next/head";
 import homeStyles from "../styles/Home.module.css";
 import { getSortedPostsData } from "@/lib/posts";
 import Link from "next/link";
+import Logo from "../components/Logo"
 
 export default function Home() {
   const allPostsData = getSortedPostsData() // 빌드 시점에 호출됩니다.
@@ -11,6 +12,7 @@ export default function Home() {
       <Head>
         <title>Sehyeong Cho</title>
       </Head>
+      <Logo />
       <section className={homeStyles.headingMd}>
         <p>[Sehyeong Cho Introduction]</p>
         <p>(This is a website)</p>
