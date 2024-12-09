@@ -3,7 +3,7 @@ import Head from "next/head"
 import postStyles from "../../../styles/Post.module.css"
 
 // `generateStaticParams`가 반환한 `params`를 사용하여 이 페이지의 여러 버전이 정적으로 생성됩니다.
-export default async function Post({ params }: { params: { id: string } }) {
+export default async function Post({ params }: { params: Promise<{ id: string }> }) {
   console.log('params', params)
 
   const { id } = await params // Next 15에서는 `params`와 같은 API가 비동기적으로 만들어졌습니다. 따라서 `await` 동적 API를 사용하여 해당 속성에 액세스해야 합니다.
