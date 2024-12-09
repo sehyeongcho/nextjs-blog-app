@@ -6,7 +6,7 @@ import remarkRehype from "remark-rehype";
 import rehypeRaw from "rehype-raw";
 import rehypeStringify from "rehype-stringify";
 
-const postsDirectory = path.join(process.cwd(), "src\\posts");
+const postsDirectory = path.join(process.cwd(), "src/posts");
 
 export function getSortedPostsData() {
   // 디렉토리의 내용을 읽습니다. (src/posts)
