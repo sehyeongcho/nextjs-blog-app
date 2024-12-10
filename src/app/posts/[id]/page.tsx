@@ -1,6 +1,7 @@
 import { getAllPostIds, getPostData } from "@/lib/posts"
 import postStyles from "../../../styles/Post.module.css"
 
+// 동적 정보에 의존하는 동적 메타데이터는 `generateMetadata` 함수를 내보내어 설정할 수 있으며, 이 함수는 Metadata 객체를 반환합니다.
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params // Next 15에서는 `params`와 같은 API가 비동기적으로 만들어졌습니다. 따라서 `await` 동적 API를 사용하여 해당 속성에 액세스해야 합니다.
 
@@ -49,4 +50,4 @@ export function generateStaticParams() {
   }))
 }
 
-export const dynamicParams = false
+export const dynamicParams = false // `generateStaticParams`에 포함되지 않은 동적 세그먼트는 404를 반환합니다.
