@@ -32,7 +32,7 @@ export default async function Post({ params }: { params: Promise<{ id: string }>
     <div className={postStyles.container}>
       <article>
         <h1 className="markdown">{postData.title}</h1>
-        <div>{postData.date}</div>
+        <div className={postStyles.textRight}>{postData.date}</div>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }}></div>
       </article>
     </div>
