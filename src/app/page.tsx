@@ -14,7 +14,7 @@ export default function Home() {
       </Head>
       <Logo />
       <section className={homeStyles.headingMd}>
-        <p className={homeStyles.center}>Sehyeong Cho</p>
+        <p className={homeStyles.textCenter}>Sehyeong Cho</p>
       </section>
       <section className={`${homeStyles.headingMd} ${homeStyles.padding1px}`}>
         <h2 className={homeStyles.headingLg}>Blog</h2>
