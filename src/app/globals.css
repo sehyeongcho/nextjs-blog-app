@@ -20,7 +20,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-h1 {
+h1.markdown {
   padding-bottom: .3em;
   font-size: 2em;
   border-bottom: 1px solid #3d444db3;
@@ -29,7 +29,7 @@ h1 {
   line-height: 1.25;
 }
 
-h2 {
+h2.markdown {
   padding-bottom: .3em;
   font-size: 1.5em;
   border-bottom: 1px solid #3d444db3;
@@ -39,7 +39,7 @@ h2 {
   line-height: 1.25;
 }
 
-h3 {
+h3.markdown {
   font-size: 1.25em;
   margin-top: 1.5rem;
   margin-bottom: 1rem;
@@ -47,19 +47,19 @@ h3 {
   line-height: 1.25;
 }
 
-p {
+p.markdown {
   margin-top: 0;
   margin-bottom: 1rem;
 }
 
-ul {
+ul.markdown {
   padding-left: 2em;
   margin-top: 0;
   margin-bottom: 1rem;
   list-style-type: disc;
 }
 
-a {
+a.markdown {
   text-decoration: underline;
   text-underline-offset: .2rem;
   color: #4493f8;
