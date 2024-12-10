@@ -1,5 +1,4 @@
 import { getAllPostIds, getPostData } from "@/lib/posts"
-import Head from "next/head"
 import postStyles from "../../../styles/Post.module.css"
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
@@ -30,9 +29,6 @@ export default async function Post({ params }: { params: Promise<{ id: string }>
 
   return (
     <div className={postStyles.container}>
-      <Head>
-        <title>{postData.title}</title>
-      </Head>
       <article>
         <h1 className="markdown">{postData.title}</h1>
         <div>{postData.date}</div>
