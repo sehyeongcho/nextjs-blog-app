@@ -55,7 +55,7 @@ export async function getPostData(id: string) {
     .use(remarkRehype, { allowDangerousHtml: true }) // HTML 태그 허용
     .use(rehypeRaw) // HTML 태그를 파싱
     .use(rehypeAddClasses, {
-      'h1, h2, h3, p, ul, a': 'markdown'
+      'h2, h3, p, ul, a': 'markdown'
     })
     .use(rehypeStringify) // HTML로 변환
     .process(matterResult.content)
