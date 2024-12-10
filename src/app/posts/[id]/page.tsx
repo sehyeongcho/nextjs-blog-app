@@ -20,7 +20,7 @@ export default async function Post({ params }: { params: Promise<{ id: string }>
         <title>{postData.title}</title>
       </Head>
       <article>
-        <h1>{postData.title}</h1>
+        <h1 className="markdown">{postData.title}</h1>
         <div>{postData.date}</div>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }}></div>
       </article>
