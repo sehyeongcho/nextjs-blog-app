@@ -1,4 +1,8 @@
 # 블로그
+Next.js를 이용한 블로그입니다.
+
+![Blog](https://github.com/user-attachments/assets/7f598346-ce94-4919-b917-64281ade43f1)
+
 - Demo: <a href="https://nextjs-blog-app-weld.vercel.app/" target="_blank">https://nextjs-blog-app-weld.vercel.app/</a>
 
 ## 프로젝트 목표
